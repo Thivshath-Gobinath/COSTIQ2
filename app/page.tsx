@@ -183,7 +183,7 @@ export default function Home() {
           maxWidth: 480,
           marginBottom: 32,
         }}>
-          
+
         </p>
 
         {/* ── Voice console ─────────────────────────────────────────── */}
@@ -207,13 +207,13 @@ export default function Home() {
           <p style={{
             fontFamily: "var(--font-text)",
             fontSize: 11,
-            fontWeight: 600,
+            fontWeight: 800,
             letterSpacing: "0.12em",
             textTransform: "uppercase",
             color: "rgba(255,255,255,0.3)",
             marginBottom: 20,
           }}>
-            Voice Consultation
+            Costiq
           </p>
 
           <ClientVoiceWrapper />
@@ -239,7 +239,7 @@ export default function Home() {
           color: "rgba(255,255,255,0.2)",
           letterSpacing: "0.04em",
         }}>
-          ↓ Scroll to explore
+          {/* ↓ Scroll to explore */}
         </p>
       </section>
 
