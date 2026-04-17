@@ -184,6 +184,21 @@ function VoiceAgentInner() {
     setHasStarted(true);
     try {
       await navigator.mediaDevices.getUserMedia({ audio: true });
+
+      // Try signed URL first (required for private agents / production)
+      try {
+        const res = await fetch("/api/get-signed-url");
+        if (res.ok) {
+          const data = await res.json();
+          if (data.signedUrl) {
+            await conversation.startSession({ signedUrl: data.signedUrl });
+            return;
+          }
+        }
+      } catch {
+        // Fall back to agentId if signed URL fetch fails (e.g. local dev without API key)
+      }
+
       await conversation.startSession({ agentId: AGENT_ID });
     } catch (err) {
       console.error("Could not start session:", err);

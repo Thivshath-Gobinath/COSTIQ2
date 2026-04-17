@@ -183,8 +183,7 @@ export default function Home() {
           maxWidth: 480,
           marginBottom: 32,
         }}>
-          Speak directly with your AI contract advisor.
-          Expert NEC3 &amp; NEC4 guidance, on demand.
+          
         </p>
 
         {/* ── Voice console ─────────────────────────────────────────── */}
@@ -227,7 +226,7 @@ export default function Home() {
             marginTop: 28,
             textAlign: "center",
           }}>
-            🔒 End-to-end encrypted · Private &amp; confidential
+              End-to-end encrypted · Private &amp; confidential
           </p>
         </div>
 
